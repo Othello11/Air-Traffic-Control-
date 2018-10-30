@@ -1,3 +1,7 @@
+create database projectflight;
+
+use projectflight;
+
 create table atc(
 controller_id integer(4) not null,
 password varchar(20),
@@ -28,7 +32,7 @@ airlines varchar(20),
 controller_id integer(4),
 flight_id varchar(10),
 primary key(pilot_id),
-foreign key(controller_id) references atc(controller_id) on delete cascade
+foreign key(controller_id) references atc(controller_id) on delete cascade,
 foreign key(flight_id) references flight(flight_id) on delete cascade);
 
 create table passenger(
