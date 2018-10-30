@@ -3,16 +3,6 @@ controller_id integer(4) not null,
 password varchar(20),
 primary key(controller_id));
 
-create table pilot(
-pilot_id integer(4) not null,
-name varchar(20),
-password varchar(20),
-gender varchar(1),
-airlines varchar(20),
-controller_id integer(4),
-primary key(pilot_id),
-foreign key(controller_id) references atc(controller_id) on delete cascade);
-
 create table flight(
 flight_id varchar(10) not null,
 aircraft_name varchar(10),
@@ -28,6 +18,18 @@ arrival varchar(20),
 pilot_id integer(4),
 primary key(flight_id,destination,arrival),
 foreign key(pilot_id) references pilot(pilot_id) on delete cascade);
+
+create table pilot(
+pilot_id integer(4) not null,
+name varchar(20),
+password varchar(20),
+gender varchar(1),
+airlines varchar(20),
+controller_id integer(4),
+flight_id varchar(10),
+primary key(pilot_id),
+foreign key(controller_id) references atc(controller_id) on delete cascade
+foreign key(flight_id) references flight(flight_id) on delete cascade);
 
 create table passenger(
 p_id integer(4) not null,
