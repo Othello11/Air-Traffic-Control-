@@ -1,4 +1,3 @@
-
 <html>
 <body>
 <h1>Pilot landing page</h1>
@@ -14,12 +13,17 @@ try{
     String username = request.getParameter("username");  
     String password = request.getParameter("password");
     Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+<<<<<<< HEAD
     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");   
+=======
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "goodjoke");   
+>>>>>>> a9283a95b16aa98ecd9545ac36e1b7a3debe5264
     PreparedStatement pst = conn.prepareStatement("Select * from pilot where pilot_id=? and password=?");
     pst.setString(1, username);
     pst.setString(2, password);
     ResultSet rs = pst.executeQuery();
     rs.next();
+<<<<<<< HEAD
     %>
     <nav>
     <!--Add font and logout link here -->
@@ -44,10 +48,23 @@ try{
 catch(Exception e){      
    out.println("Something went wrong !! Please try again " + e);
 }   
+=======
+    out.println(rs.getString(1));
+    out.println(rs.getString(5));
+}
+catch(Exception e){      
+   out.println("Something went wrong !! Please try again " + e);
+
+}   
+
+>>>>>>> a9283a95b16aa98ecd9545ac36e1b7a3debe5264
 %>
 
 
 </body>
 </html>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a9283a95b16aa98ecd9545ac36e1b7a3debe5264
