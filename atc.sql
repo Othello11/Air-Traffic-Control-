@@ -29,9 +29,10 @@ status varchar(20),
 type varchar(20),
 source varchar(20),
 destination varchar(20),
-arrival varchar(20),
+arrival time,
+departure time,
 pilot_id integer(4),
-primary key(flight_id,destination,arrival),
+primary key(flight_id,source,destination),
 foreign key(pilot_id) references pilot(pilot_id) on delete cascade);
 
 alter table pilot 
