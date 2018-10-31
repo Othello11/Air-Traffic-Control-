@@ -1,4 +1,3 @@
-
 <html>
 <body>
 <h1>Pilot landing page</h1>
@@ -9,17 +8,28 @@
 <%@ page import ="java.sql.SQLException" %>
 <%@ page import ="java.sql.Statement" %>
 <%@ page import ="java.lang.*" %>
-<% 
-String username = request.getParameter("username");
-String password = request.getParameter("password");
-Class.forName("com.mysql.jdbc.Driver");
-Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");
-Statement st = conn.createStatement();
-String query=  "Select * from pilot";
-ResultSet rs = st.executeQuery(query);
+<%
+try{
+    String username = request.getParameter("username");  
+    String password = request.getParameter("password");
+    Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "goodjoke");   
+    PreparedStatement pst = conn.prepareStatement("Select * from pilot where pilot_id=? and password=?");
+    pst.setString(1, username);
+    pst.setString(2, password);
+    ResultSet rs = pst.executeQuery();
+    rs.next();
+    out.println(rs.getString(1));
+    out.println(rs.getString(5));
+}
+catch(Exception e){      
+   out.println("Something went wrong !! Please try again " + e);
+
+}   
+
 %>
-<p>Hi,</p> <% System.out.print(rs.getInt(1));%>
 
 
 </body>
 </html>
+
