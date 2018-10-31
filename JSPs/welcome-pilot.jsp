@@ -9,17 +9,45 @@
 <%@ page import ="java.sql.SQLException" %>
 <%@ page import ="java.sql.Statement" %>
 <%@ page import ="java.lang.*" %>
-<% 
-String username = request.getParameter("username");
-String password = request.getParameter("password");
-Class.forName("com.mysql.jdbc.Driver");
-Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");
-Statement st = conn.createStatement();
-String query=  "Select * from pilot";
-ResultSet rs = st.executeQuery(query);
+<%
+try{
+    String username = request.getParameter("username");  
+    String password = request.getParameter("password");
+    Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");   
+    PreparedStatement pst = conn.prepareStatement("Select * from pilot where pilot_id=? and password=?");
+    pst.setString(1, username);
+    pst.setString(2, password);
+    ResultSet rs = pst.executeQuery();
+    rs.next();
+    %>
+    <nav>
+    <!--Add font and logout link here -->
+   	<form method="get" action="logout.jsp">
+    	<button type="submit">Logout</button>
+	</form>
+    </nav>
+    <div class = "profile">
+    <p>Welcome <%out.print(rs.getString(2));%></p>
+    <p>Your Pilot ID is : <%out.print(rs.getString(1)); %></p>
+    <p>Airlines:<%out.println(rs.getString(5));%></p>
+    </div>
+    <div class = "flight_details">
+    <p>You have been assigned flight no. : <%out.print(rs.getString(7));%><a href= "" target ="blank">Click here</a> for details</p>
+    <p>You have been assigned with Air Traffic Control Unit: <%out.print(rs.getInt(6)); %></p>
+    </div>
+    <footer>
+    <!-- Add copyright and some more dilling -->
+    </footer>
+    <%
+}
+catch(Exception e){      
+   out.println("Something went wrong !! Please try again " + e);
+}   
 %>
-<p>Hi,</p> <% System.out.print(rs.getInt(1));%>
 
 
 </body>
 </html>
+
+
