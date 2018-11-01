@@ -28,18 +28,12 @@ status varchar(20),
 type varchar(20),
 source varchar(20),
 destination varchar(20),
-arrival time,
 departure time,
+arrival time,
 pilot_id integer(4),
 primary key(flight_id,source,destination),
 foreign key(pilot_id) references pilot(pilot_id) on delete cascade);
 
-alter table pilot 
-add flight_id varchar(10);
-
-alter table pilot
-add constraint fk_flight_id foreign key(flight_id) references flight(flight_id)
-on delete cascade;
 
 create table passenger(
 p_id integer(4) not null,
