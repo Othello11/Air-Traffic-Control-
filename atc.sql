@@ -45,8 +45,8 @@ foreign key(flight_id) references flight(flight_id) on delete cascade);
 
 create table airport(
 airport_name varchar(20),
-distance varchar(5),
-time time(5),
+distance int(4),
+req_time time,
 primary key(airport_name));
 
 create table runway(

@@ -201,8 +201,11 @@ insert into flight values('I52469','A320',1,50,'No','Air Asia','On Time','Domest
 
 
 
-insert into flight values('6E681','A320',1,50,'No','Indigo','On Time','Domestic','Bengaluru','Pune','22:10:00','23:57:00',2019)
+insert into flight values('6E681','A320',1,50,'No','Indigo','On Time','Domestic','Bengaluru','Pune','22:10:00','23:57:00',2019);
 
+
+insert into airport values
+('Bengaluru','0','00:00:00');
 
 insert into runway values
 (19,1001,'yes','Bengaluru');
