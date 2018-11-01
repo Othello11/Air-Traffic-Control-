@@ -14,7 +14,6 @@ password varchar(20),
 gender varchar(1),
 airlines varchar(20),
 controller_id integer(4),
-flight_id varchar(10),
 primary key(pilot_id),
 foreign key(controller_id) references atc(controller_id) on delete cascade);
 
