@@ -15,12 +15,17 @@
 <%
     try{
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");    
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "goodjoke");    
         PreparedStatement pst = conn.prepareStatement("Select * from flight order by departure");
         ResultSet rs = pst.executeQuery();
         %>
      <header>
-     <!-- logout and logo -->
+     
+    <!--Add font and logout link here -->
+   	<form method="get" action="logout-atc.jsp">
+    	<button type="submit">Logout</button>
+	</form>
+    
      </header>
      <nav>
      	<ul>
@@ -31,6 +36,9 @@
      	<li><a href ="atc-weather.jsp">Weather</a></li>
 		</ul>  
      </nav>
+     <div class="operations">
+     	  <a href="flight-form.html">Schedule New Flight</a>
+     </div>
      <div class="flight-details">
      <table>
      	<th>
@@ -65,6 +73,8 @@
      	</tr>
      	<% } %>
     </table>
+    
+  
      <%
        
      

@@ -14,12 +14,18 @@
 <%
     try{
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");    
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "goodjoke");    
         PreparedStatement pst = conn.prepareStatement("Select * from flight where source='Bengaluru' order by arrival");
         ResultSet rs = pst.executeQuery();
         %>
      <header>
      <!-- logout and logo -->
+      
+    <!--Add font and logout link here -->
+   	<form method="get" action="logout-atc.jsp">
+    	<button type="submit">Logout</button>
+	</form>
+    
      </header>
      <nav>
      	<ul>
