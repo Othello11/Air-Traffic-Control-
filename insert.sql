@@ -153,7 +153,7 @@ insert into flight values('I51451','A20N',1,50,'No','Air Asia','On Time','Domest
 insert into flight values('6E897','A320',1,50,'No','Indigo','On Time','Domestic','Mangalore','Bengaluru','07:30:00','08:20:00',2017);
 insert into flight values('AI339','A20N',1,80,'No','Air India','On Time','International','Bangkok','Bengaluru','05:45:00','08:25:00',2007);
 insert into flight values('EK564','B77W',1,50,'No','Emirates','On Time','International','Dubai','Bengaluru','03:50:00','08:50:00',2004);
-insert into flight values('I51567','A320',1,50,'No','Air Asia','On Time','Domestic','Bhubaneswar','Bangalore','07:00:00','09:00:00',2025);
+insert into flight values('I51567','A320',1,50,'No','Air Asia','On Time','Domestic','Bhubaneswar','Bengaluru','07:00:00','09:00:00',2025);
 insert into flight values('SG438','B747',1,50,'No','Spice Jet','On Time','Domestic','Vadodara','Bengaluru','07:30:00','09:20:00',2049);
 
 insert into flight values('I5162','A320',1,50,'No','Air Asia','On Time','Domestic','Bengaluru','Ranchi','08:32:00','10:50:00',2026);
@@ -163,10 +163,10 @@ insert into flight values('UK812','A320',1,50,'No','Vistara','On Time','Domestic
 insert into flight values('6E477','A320',1,50,'No','Indigo','On Time','Domestic','Bengaluru','Amritsar','10:00:00','13:10:00',2015);
 insert into flight values('9W141','A320',1,50,'No','Jet Airways','On Time','Domestic','Bengaluru','Patna','11:00:00','13:25:00',2044);
 
-insert into flight values('G8291','A320',1,50,'No','Go Air','On Time','Domestic','Hyderabad','Bangalore','07:00:00','11:10:00',2056);
-insert into flight values('6E642','A320',1,50,'No','Indigo','On Time','Domestic','Jaipur','Bangalore','09:00:00','11:30:00',2018);
-insert into flight values('SG767','A320 ',1,50,'No','Spice Jet','On Time','Domestic','Patna','Bangalore','11:30:00','14:20:00',2050);
-insert into flight values('G8268','A320',1,50,'No','Go Air','On Time','Domestic','Goa','Bangalore','14:00:00','15:10:00',2057);
+insert into flight values('G8291','A320',1,50,'No','Go Air','On Time','Domestic','Hyderabad','Bengaluru','07:00:00','11:10:00',2056);
+insert into flight values('6E642','A320',1,50,'No','Indigo','On Time','Domestic','Jaipur','Bengaluru','09:00:00','11:30:00',2018);
+insert into flight values('SG767','A320 ',1,50,'No','Spice Jet','On Time','Domestic','Patna','Bengaluru','11:30:00','14:20:00',2050);
+insert into flight values('G8268','A320',1,50,'No','Go Air','On Time','Domestic','Goa','Bengaluru','14:00:00','15:10:00',2057);
 
 
 
@@ -174,9 +174,9 @@ insert into flight values('IX468','B738',1,80,'No','Air India','On Time','Intern
 insert into flight values('AF181','B777',1,80,'No','Air France','On Time','International','Bengaluru','Paris','13:10:00','22:50:00',2037);
 insert into flight values('9W410','B38M',1,70,'No','Jet Airways','On Time','Domestic','Bengaluru','Mumbai','14:45:00','15:50:00',2045);
 
-insert into flight values('AI771','A320',1,50,'No','Air India','On Time','Domestic','Goa','Bangalore','14:15:00','16:45:00',2009);
-insert into flight values('G8803','A320',1,50,'No','Go Air','On Time','Domestic','Port Blair','Bangalore','15:15:00','17:55:00',2058);
-insert into flight values('SG3521','A320',1,50,'No','Spice Jet','On Time','Domestic','Kozikode','Bangalore','17:20:00','18:25:00',2049);
+insert into flight values('AI771','A320',1,50,'No','Air India','On Time','Domestic','Goa','Bengaluru','14:15:00','16:45:00',2009);
+insert into flight values('G8803','A320',1,50,'No','Go Air','On Time','Domestic','Port Blair','Bengaluru','15:15:00','17:55:00',2058);
+insert into flight values('SG3521','A320',1,50,'No','Spice Jet','On Time','Domestic','Kozikode','Bengaluru','17:20:00','18:25:00',2049);
 
 insert into flight values('6E361','A220N',1,80,'No','Indigo','On Time','Domestic','Bengaluru','Mumbai','15:20:00','17:20:00',2017);
 insert into flight values('I51728','A320',1,70,'No','Air Aisa','On Time','Domestic','Bengaluru','Jaipur','16:30:00','18:15:00',2025);
@@ -186,13 +186,13 @@ insert into flight values('EK567','B770',1,80,'No','Emirates','On Time','Interna
 
 
 
-insert into flight values('EY236','A321',1,50,'No','Ethiad Airways','On Time','International','Abu Dhabi','Bangalore','14:15:00','19:30:00',2067);
-insert into flight values('QR8638','33X',1,50,'No','Qatar Airways','On Time','International','Doha','Bangalore','13:10:00','19:45:00',2065);
-insert into flight values('9W660','B738',1,50,'No','Jet Airways','On Time','Domestic','Guwahati','Bangalore','16:55:00','20:15:00',2046);
+insert into flight values('EY236','A321',1,50,'No','Ethiad Airways','On Time','International','Abu Dhabi','Bengaluru','14:15:00','19:30:00',2067);
+insert into flight values('QR8638','33X',1,50,'No','Qatar Airways','On Time','International','Doha','Bengaluru','13:10:00','19:45:00',2065);
+insert into flight values('9W660','B738',1,50,'No','Jet Airways','On Time','Domestic','Guwahati','Bengaluru','16:55:00','20:15:00',2046);
 insert into flight values('AI173','A320',1,70,'No','Air India','On Time','Domestic','Bengaluru','Delhi','21:10:00','23:55:00',2009);
 insert into flight values('G8426','74H',1,120,'No','Go Air','On Time','Domestic','Bengaluru','Mumbai','22:05:00','23:50:00',2057);
 
-insert into flight values('SQ502','B772',1,50,'No','Singapore Airlines','On Time','International','Singapore','Bangalore','15:30:00','21:30:00',2039);
+insert into flight values('SQ502','B772',1,50,'No','Singapore Airlines','On Time','International','Singapore','Bengaluru','15:30:00','21:30:00',2039);
 insert into flight values('BA119','B777',1,80,'No','British Airways','On Time', 'International','London','Bengaluru','12:30:00','22:30:00',2062);
 insert into flight values('AF181','B777',1,80,'No','Air France','On Time','International','Paris','Bengaluru','13:10:00','22:50:00',2038);
 insert into flight values('I52469','A320',1,50,'No','Air Asia','On Time','Domestic','Indore','Bengaluru','22:05:00','23:55:00',2027);
