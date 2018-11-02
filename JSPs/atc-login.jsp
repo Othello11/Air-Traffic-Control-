@@ -22,7 +22,7 @@
         if(rs.next()){           
            //out.println("Valid login credentials")
            RequestDispatcher rd = request.getRequestDispatcher("welcome-atc.jsp");
-           //rd.forward(request, response);
+           rd.forward(request, response);
         }
         else{
         	%>
