@@ -65,5 +65,5 @@ controller_id integer(4),
 temperature integer(2),
 wind_speed integer(2),
 wind_direction varchar(15),
-primary key(cur_date,controller_id),
+primary key(st_time, end_time),
 foreign key(controller_id) references atc(controller_id) on delete cascade); 
