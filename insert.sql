@@ -214,7 +214,23 @@ insert into runway values
 
 
 insert into weather values
-('01/11/18',1001,24,14,'-1° south');
+('00:00:00','01:00:00',1001,20,9,'100° north');
+insert into weather values
+('01:00:00','02:00:00',1001,21,12,'90° north');
+insert into weather values
+('02:00:00','03:00:00',1001,21,15,'100° north');
+insert into weather values
+('03:00:00','04:00:00',1001,23,16,'100° north');
+insert into weather values
+('04:00:00','05:00:00',1001,24,20,'110° north');
+insert into weather values
+('05:00:00','06:00:00',1001,26,20,'110° north');
+insert into weather values
+('06:00:00','07:00:00',1001,26,20,'100° north');
+insert into weather values
+('07:00:00','08:00:00',1001,27,20,'110° north');
+
+
 
 
 
