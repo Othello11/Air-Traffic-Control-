@@ -59,8 +59,8 @@ foreign key(controller_id) references atc(controller_id) on delete cascade,
 foreign key(airport_name) references airport(airport_name) on delete cascade);
 
 create table weather(
-st_time time;
-end_time time;
+st_time time,
+end_time time,
 controller_id integer(4),
 temperature integer(2),
 wind_speed integer(2),
