@@ -14,7 +14,7 @@
 <%
     try{
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "goodjoke");    
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");    
         PreparedStatement pst = conn.prepareStatement("Select * from flight where source='Bengaluru' order by arrival");
         ResultSet rs = pst.executeQuery();
         %>
@@ -71,38 +71,14 @@
      	<% } %>
     </table>
      <%
-       
-     
-     
-     
      %>
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     </div>
-     
-     	
-         
-        
-        
-  
-<%        
+       </div>
+ <%        
    }
    catch(Exception e){       
        out.println("Something went wrong !! Please try again " + e);
   
    }    
-   
 %>
 </body>
 </html>

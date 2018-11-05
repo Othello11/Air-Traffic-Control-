@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>
+Flight Cancel
+</title>
+</head>
+<body>
+ <header>
+     
+    <!--Add font and logout link here -->
+   	<form method="get" action="logout-atc.jsp">
+    	<button type="submit">Logout</button>
+	</form>
+    
+     </header>
+     <nav>
+     	<ul>
+     	<li><a href ="welcome-atc.jsp">General</a></li>
+     	<li><a href ="atc-arrival.jsp">Arrival</a></li>
+     	<li><a href ="atc-departure.jsp">Departure</a></li>
+     	<li><a href ="atc-review.jsp">Reviews</a></li>
+     	<li><a href ="atc-weather.jsp">Weather</a></li>
+		</ul>  
+     </nav>
+   	<div class="flight-cancel">
+		<form method="post" action="flight-cancel.jsp">
+		Flight ID : <input type="text"  name="flight_id"><br>
+		<input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+
+</html>

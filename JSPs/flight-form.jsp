@@ -29,7 +29,7 @@ try{
     String pilot_id = request.getParameter("pilot_id");
     
     Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "goodjoke");   
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");   
     PreparedStatement pst = conn.prepareStatement("insert into flight values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
     
     pst.setString(1,flight_id);

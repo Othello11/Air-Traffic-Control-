@@ -15,7 +15,7 @@
 <%
     try{
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "goodjoke");    
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");    
         PreparedStatement pst = conn.prepareStatement("Select * from flight order by departure");
         ResultSet rs = pst.executeQuery();
         %>
@@ -38,6 +38,7 @@
      </nav>
      <div class="operations">
      	  <a href="flight-form.html">Schedule New Flight</a>
+     	  <a href="flight-cancel.html">Cancel a flight</a>
      </div>
      <div class="flight-details">
      <table>
