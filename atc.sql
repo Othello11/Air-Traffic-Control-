@@ -62,8 +62,9 @@ create table weather(
 st_time time,
 end_time time,
 controller_id integer(4),
-temperature integer(2),
+temperature varchar(5),
 wind_speed integer(2),
 wind_direction varchar(15),
+visibilty varchar(25),
 primary key(st_time, end_time),
 foreign key(controller_id) references atc(controller_id) on delete cascade); 

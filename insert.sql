@@ -199,6 +199,8 @@ insert into flight values('I52469','A320',1,50,'No','Air Asia','On Time','Domest
 
 
 
+
+
 insert into flight values('6E681','A320',1,50,'No','Indigo','On Time','Domestic','Bengaluru','Pune','22:10:00','23:57:00',2019);
 
 
@@ -212,102 +214,51 @@ insert into runway values
 
 
 insert into weather values
-('00:00:00','01:00:00',1001,20,9,'100° north');
+('00:00:00','01:00:00',1001,'17°C', 7,'110° north','100m');
 insert into weather values
-('01:00:00','02:00:00',1001,21,12,'90° north');
+('01:00:00','02:00:00',1001, '17°C',7,'110° north','400m');
 insert into weather values
-('02:00:00','03:00:00',1001,21,15,'100° north');
+('02:00:00','03:00:00',1001,'18°C',7,'90° north','2000m');
 insert into weather values
-('03:00:00','04:00:00',1001,23,16,'100° north');
+('03:00:00','04:00:00',1001, '22°C' ,5,'90° north','6000m');
 insert into weather values
-('04:00:00','05:00:00',1001,24,20,'110° north');
+('04:00:00','05:00:00',1001, '24°C' ,11,'80° north','6000m');
 insert into weather values
-('05:00:00','06:00:00',1001,26,20,'110° north');
+('05:00:00','06:00:00',1001,'26°C',5,'50° north','Sky and visibility OK');
 insert into weather values
-('06:00:00','07:00:00',1001,26,20,'100° north');
+('06:00:00','07:00:00',1001,'27°C',18,'50° north','Sky and visibility OK');
 insert into weather values
-('07:00:00','08:00:00',1001,27,20,'110° north');
-
-
-insert into passenger values
-(3001,'Akash Singh','M','6E2135');
-insert into passenger values
-(3002,'Arun Sinha','M','6E361');
-insert into passenger values
-(3003,'Babita Ganguly','F','6E2135');
-insert into passenger values
-(3004,'Soham Sharma','M','6E477');
-insert into passenger values
-(3005,'Shubham Soni','M','6E642');
-insert into passenger values
-(3006,'Shiv Kumar','M','6E681');
-insert into passenger values
-(3007,'Ananya Gupta','F','6E709');
-insert into passenger values
-(3008,'Sakshi Singh','F','6E897');
-insert into passenger values
-(3009,'Shaan Mohd','M','9W141');
-insert into passenger values
-(3010,'Rishabh Sengar','M','9W236');
-insert into passenger values
-(3011,'Mohit Verma','M','9W410');
-insert into passenger values
-(3012,'Harsh Sinha','M','9W660');
-insert into passenger values
-(3013,'Anil Ahuja','M','AF181');
-insert into passenger values
-(3014,'Shilpa Kumari','F','AI173');
-insert into passenger values
-(3015,'Deepak Dubey','M','AI339');
-insert into passenger values
-(3016,'Shahid Bhat','M','AI771');
-insert into passenger values
-(3017,'Jyoti Singh','F','AI173');
-insert into passenger values
-(3018,'Shivani Mishra','F','9W660');
-insert into passenger values
-(3019,'Karan Shah','M','BA119');
-insert into passenger values
-(3020,'Sambit Patra','M','G8803');
-insert into passenger values
-(3021,'Akshat Jha','M','I51451');
-insert into passenger values
-(3022,'Nikhil Advani','M','G8291');
-insert into passenger values
-(3023,'Ravish Singh','M','EY217');
-insert into passenger values
-(3024,'Aditya Kumar','M','EY236');
-insert into passenger values
-(3025,'Diksha Kumari','F','EK564');
-insert into passenger values
-(3026,'Ravi Shankar','M','EK567');
-insert into passenger values
-(3027,'Alok Pal','M','BS119');
-insert into passenger values
-(3028,'Asifa Shekh','F','I51451');
-insert into passenger values
-(3029,'Shekhar Kapur','M','I51567');
-insert into passenger values
-(3030,'Meera Gupta','F','I51582');
-insert into passenger values
-(3031,'Ravi Prakash','M','I5162');
-insert into passenger values
-(3032,'Saurabh Rajput','M','IX468');
-insert into passenger values
-(3033,'Rohit Kumar','M','MH193');
-insert into passenger values
-(3034,'Rohan Mishra','M','QR8638');
-insert into passenger values
-(3035,'Shruti Seth','F','SG3301');
-insert into passenger values
-(3036,'Arushi Singh','F','SG3465');
-insert into passenger values
-(3037,'Shagun Pandey','M','UK812');
-insert into passenger values
-(3038,'Puneet Shah','M','SQ502');
-insert into passenger values
-(3039,'Gautam Singh','M','SG438');
-insert into passenger values
-(3040,'Pritam Kumar','M','SG767');
-
+('07:00:00','08:00:00',1001,'27°C',13,'50° north','Sky and visibility OK');
+insert into weather values
+('08:00:00','09:00:00',1001,'28°C',16,'100° north','Sky and visibility OK');
+insert into weather values
+('09:00:00','10:00:00',1001,'28°C',15,'40° north','Sky and visibility OK');
+insert into weather values
+('10:00:00','11:00:00',1001,'30°C',15,'30° north','Sky and visibility OK');
+insert into weather values
+('11:00:00','12:00:00',1001,'28°C',15,'60° north','Sky and visibility OK');
+insert into weather values
+('12:00:00','13:00:00',1001,'25°C',5,'50° north','Sky and visibility OK');
+insert into weather values
+('13:00:00','14:00:00',1001,'23°C',7,'30° north','8000m');
+insert into weather values
+('14:00:00','15:00:00',1001,'22°C',4,'40° north','6000m');
+insert into weather values
+('15:00:00','16:00:00',1001,'21°C',2,'60° north','6000m');
+insert into weather values
+('16:00:00','17:00:00',1001,'21°C',7,'30° north','6000m');
+insert into weather values
+('17:00:00','18:00:00',1001,'20°C',6,'120° north','6000m');
+insert into weather values
+('18:00:00','19:00:00',1001,'18°C',5,'50° north','6000m');
+insert into weather values
+('19:00:00','20:00:00',1001,'17°C',0,'0° north','6000m');
+insert into weather values
+('20:00:00','21:00:00',1001,'17°C',2,'10° north','4000m');
+insert into weather values
+('21:00:00','22:00:00',1001,'16°C',3,'100° north','4000m');
+insert into weather values
+('22:00:00','23:00:00',1001,'15°C',3,'-10° north','4000m');
+insert into weather values
+('23:00:00','00:00:00',1001,'15°C',1,'0° north','3000m');
 
