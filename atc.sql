@@ -40,6 +40,7 @@ p_id integer(4) not null,
 p_name varchar(20),
 gender varchar(1),
 flight_id varchar(10),
+review text,
 primary key(p_id),
 foreign key(flight_id) references flight(flight_id) on delete cascade);
 

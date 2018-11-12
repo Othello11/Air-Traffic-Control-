@@ -180,7 +180,7 @@ insert into flight values('SG3521','A320',1,50,'No','Spice Jet','On Time','Domes
 
 insert into flight values('6E361','A220N',1,80,'No','Indigo','On Time','Domestic','Bengaluru','Mumbai','15:20:00','17:20:00',2017);
 insert into flight values('I51728','A320',1,70,'No','Air Aisa','On Time','Domestic','Bengaluru','Jaipur','16:30:00','18:15:00',2025);
-insert into flight values('6E681','74H',1,120,'No','Lufthansa','On Time','International','Bengaluru','Frankfurt','17:00:00','23:10:00',2066);
+insert into flight values('LH754','74H',1,120,'No','Lufthansa','On Time','International','Bengaluru','Frankfurt','17:00:00','23:10:00',2066);
 insert into flight values('EK567','B770',1,80,'No','Emirates','On Time','International','Bengaluru','Dubai','17:50:00','22:50:00',2035);
 
 
@@ -194,7 +194,7 @@ insert into flight values('G8426','74H',1,120,'No','Go Air','On Time','Domestic'
 
 insert into flight values('SQ502','B772',1,50,'No','Singapore Airlines','On Time','International','Singapore','Bengaluru','15:30:00','21:30:00',2039);
 insert into flight values('BA119','B777',1,80,'No','British Airways','On Time', 'International','London','Bengaluru','12:30:00','22:30:00',2062);
-insert into flight values('AF181','B777',1,80,'No','Air France','On Time','International','Paris','Bengaluru','13:10:00','22:50:00',2038);
+insert into flight values('AF182','B777',1,80,'No','Air France','On Time','International','Paris','Bengaluru','13:10:00','22:50:00',2038);
 insert into flight values('I52469','A320',1,50,'No','Air Asia','On Time','Domestic','Indore','Bengaluru','22:05:00','23:55:00',2027);
 
 
@@ -204,85 +204,85 @@ insert into flight values('I52469','A320',1,50,'No','Air Asia','On Time','Domest
 insert into flight values('6E681','A320',1,50,'No','Indigo','On Time','Domestic','Bengaluru','Pune','22:10:00','23:57:00',2019);
 
 insert into passenger values
-(3001,'Akash Singh','M','6E2135');
+(3001,'Akash Singh','M','6E2135','');
 insert into passenger values
-(3002,'Arun Sinha','M','6E361');
+(3002,'Arun Sinha','M','6E361','');
 insert into passenger values
-(3003,'Babita Ganguly','F','6E2135');
+(3003,'Babita Ganguly','F','6E2135','');
 insert into passenger values
-(3004,'Soham Sharma','M','6E477');
+(3004,'Soham Sharma','M','6E477','');
 insert into passenger values
-(3005,'Shubham Soni','M','6E642');
+(3005,'Shubham Soni','M','6E642','');
 insert into passenger values
-(3006,'Shiv Kumar','M','6E681');
+(3006,'Shiv Kumar','M','6E681','');
 insert into passenger values
-(3007,'Ananya Gupta','F','6E709');
+(3007,'Ananya Gupta','F','6E709','');
 insert into passenger values
-(3008,'Sakshi Singh','F','6E897');
+(3008,'Sakshi Singh','F','6E897','');
 insert into passenger values
-(3009,'Shaan Mohd','M','9W141');
+(3009,'Shaan Mohd','M','9W141','');
 insert into passenger values
-(3010,'Rishabh Sengar','M','9W236');
+(3010,'Rishabh Sengar','M','9W236','');
 insert into passenger values
-(3011,'Mohit Verma','M','9W410');
+(3011,'Mohit Verma','M','9W410','');
 insert into passenger values
-(3012,'Harsh Sinha','M','9W660');
+(3012,'Harsh Sinha','M','9W660','');
 insert into passenger values
-(3013,'Anil Ahuja','M','AF181');
+(3013,'Anil Ahuja','M','AF181','');
 insert into passenger values
-(3014,'Shilpa Kumari','F','AI173');
+(3014,'Shilpa Kumari','F','AI173','');
 insert into passenger values
-(3015,'Deepak Dubey','M','AI339');
+(3015,'Deepak Dubey','M','AI339','');
 insert into passenger values
-(3016,'Shahid Bhat','M','AI771');
+(3016,'Shahid Bhat','M','AI771','');
 insert into passenger values
-(3017,'Jyoti Singh','F','AI173');
+(3017,'Jyoti Singh','F','AI173','');
 insert into passenger values
-(3018,'Shivani Mishra','F','9W660');
+(3018,'Shivani Mishra','F','9W660','');
 insert into passenger values
-(3019,'Karan Shah','M','BA119');
+(3019,'Karan Shah','M','BA119','');
 insert into passenger values
-(3020,'Sambit Patra','M','G8803');
+(3020,'Sambit Patra','M','G8803','');
 insert into passenger values
-(3021,'Akshat Jha','M','I51451');
+(3021,'Akshat Jha','M','I51451','');
 insert into passenger values
-(3022,'Nikhil Advani','M','G8291');
+(3022,'Nikhil Advani','M','G8291','');
 insert into passenger values
-(3023,'Ravish Singh','M','EY217');
+(3023,'Ravish Singh','M','EY217','');
 insert into passenger values
-(3024,'Aditya Kumar','M','EY236');
+(3024,'Aditya Kumar','M','EY236','');
 insert into passenger values
-(3025,'Diksha Kumari','F','EK564');
+(3025,'Diksha Kumari','F','EK564','');
 insert into passenger values
-(3026,'Ravi Shankar','M','EK567');
+(3026,'Ravi Shankar','M','EK567','');
 insert into passenger values
-(3027,'Alok Pal','M','BS119');
+(3027,'Alok Pal','M','BA119','');
 insert into passenger values
-(3028,'Asifa Shekh','F','I51451');
+(3028,'Asifa Shekh','F','I51451','');
 insert into passenger values
-(3029,'Shekhar Kapur','M','I51567');
+(3029,'Shekhar Kapur','M','I51567','');
 insert into passenger values
-(3030,'Meera Gupta','F','I51582');
+(3030,'Meera Gupta','F','I51582','');
 insert into passenger values
-(3031,'Ravi Prakash','M','I5162');
+(3031,'Ravi Prakash','M','I5162','');
 insert into passenger values
-(3032,'Saurabh Rajput','M','IX468');
+(3032,'Saurabh Rajput','M','IX468','');
 insert into passenger values
-(3033,'Rohit Kumar','M','MH193');
+(3033,'Rohit Kumar','M','MH193','');
 insert into passenger values
-(3034,'Rohan Mishra','M','QR8638');
+(3034,'Rohan Mishra','M','QR8638','');
 insert into passenger values
-(3035,'Shruti Seth','F','SG3301');
+(3035,'Shruti Seth','F','SG3301','');
 insert into passenger values
-(3036,'Arushi Singh','F','SG3465');
+(3036,'Arushi Singh','F','SG3465','');
 insert into passenger values
-(3037,'Shagun Pandey','M','UK812');
+(3037,'Shagun Pandey','M','UK812','');
 insert into passenger values
-(3038,'Puneet Shah','M','SQ502');
+(3038,'Puneet Shah','M','SQ502','');
 insert into passenger values
-(3039,'Gautam Singh','M','SG438');
+(3039,'Gautam Singh','M','SG438','');
 insert into passenger values
-(3040,'Pritam Kumar','M','SG767');
+(3040,'Pritam Kumar','M','SG767','');
 
 insert into airport values
 ('Bengaluru','0','00:00:00');
