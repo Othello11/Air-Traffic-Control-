@@ -12,12 +12,22 @@
 <%@ page import ="java.sql.SQLException" %>
 <%@ page import ="java.sql.Statement" %>
 <%@ page import ="java.lang.*" %>
+<%@ page import ="java.util.*" %>
+<%Calendar calendar = Calendar.getInstance();
+int hours = calendar.get(Calendar.HOUR_OF_DAY); 
+response.setIntHeader("Refresh", 3600); %>
 <%
     try{
+    	String hour = String.valueOf(hours) + ":00:00";
+    	
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");    
         PreparedStatement pst = conn.prepareStatement("Select * from flight order by departure");
+        PreparedStatement pst1 = conn.prepareStatement("Select * from weather where st_time=?");
+        pst1.setString(1, hour);
         ResultSet rs = pst.executeQuery();
+        ResultSet rs1= pst1.executeQuery();
+        rs1.next();
         %>
      <header>
      
@@ -27,6 +37,16 @@
 	</form>
     
      </header>
+    <div class="weather">
+    <ul style="list-style-type:none">
+  		<li>Temperature <% out.println(rs1.getString(4));%></li>
+  		<li>Wind Speed <% out.println(rs1.getInt(5)); %>KMPH</li>
+  		<li>Wind Direction <% out.println(rs1.getString(6)); %></li>
+  		<li>Visibility <%out.println(rs1.getString(7)); %></li>
+</ul>  
+    
+    
+    </div>
      <nav>
      	<ul>
      	<li><a href ="welcome-atc.jsp">General</a></li>
@@ -37,7 +57,7 @@
 		</ul>  
      </nav>
      <div class="operations">
-     	  <a href="flight-form.html">Schedule New Flight</a>
+     	  <a href="airlines-request.html">Schedule New Flight</a>
      	  <a href="flight-cancel.html">Cancel a flight</a>
      </div>
      <div class="flight-details">
@@ -74,35 +94,9 @@
      	</tr>
      	<% } %>
     </table>
-    
-  
-     <%
-       
-     
-     
-     
-     %>
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
+   
      </div>
-     
-     	
-         
-        
-        
-  
-<%        
+ <%        
    }
    catch(Exception e){       
        out.println("Something went wrong !! Please try again " + e);
@@ -110,27 +104,4 @@
    }    
    
 %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
