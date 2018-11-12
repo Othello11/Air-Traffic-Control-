@@ -203,6 +203,86 @@ insert into flight values('I52469','A320',1,50,'No','Air Asia','On Time','Domest
 
 insert into flight values('6E681','A320',1,50,'No','Indigo','On Time','Domestic','Bengaluru','Pune','22:10:00','23:57:00',2019);
 
+insert into passenger values
+(3001,'Akash Singh','M','6E2135');
+insert into passenger values
+(3002,'Arun Sinha','M','6E361');
+insert into passenger values
+(3003,'Babita Ganguly','F','6E2135');
+insert into passenger values
+(3004,'Soham Sharma','M','6E477');
+insert into passenger values
+(3005,'Shubham Soni','M','6E642');
+insert into passenger values
+(3006,'Shiv Kumar','M','6E681');
+insert into passenger values
+(3007,'Ananya Gupta','F','6E709');
+insert into passenger values
+(3008,'Sakshi Singh','F','6E897');
+insert into passenger values
+(3009,'Shaan Mohd','M','9W141');
+insert into passenger values
+(3010,'Rishabh Sengar','M','9W236');
+insert into passenger values
+(3011,'Mohit Verma','M','9W410');
+insert into passenger values
+(3012,'Harsh Sinha','M','9W660');
+insert into passenger values
+(3013,'Anil Ahuja','M','AF181');
+insert into passenger values
+(3014,'Shilpa Kumari','F','AI173');
+insert into passenger values
+(3015,'Deepak Dubey','M','AI339');
+insert into passenger values
+(3016,'Shahid Bhat','M','AI771');
+insert into passenger values
+(3017,'Jyoti Singh','F','AI173');
+insert into passenger values
+(3018,'Shivani Mishra','F','9W660');
+insert into passenger values
+(3019,'Karan Shah','M','BA119');
+insert into passenger values
+(3020,'Sambit Patra','M','G8803');
+insert into passenger values
+(3021,'Akshat Jha','M','I51451');
+insert into passenger values
+(3022,'Nikhil Advani','M','G8291');
+insert into passenger values
+(3023,'Ravish Singh','M','EY217');
+insert into passenger values
+(3024,'Aditya Kumar','M','EY236');
+insert into passenger values
+(3025,'Diksha Kumari','F','EK564');
+insert into passenger values
+(3026,'Ravi Shankar','M','EK567');
+insert into passenger values
+(3027,'Alok Pal','M','BS119');
+insert into passenger values
+(3028,'Asifa Shekh','F','I51451');
+insert into passenger values
+(3029,'Shekhar Kapur','M','I51567');
+insert into passenger values
+(3030,'Meera Gupta','F','I51582');
+insert into passenger values
+(3031,'Ravi Prakash','M','I5162');
+insert into passenger values
+(3032,'Saurabh Rajput','M','IX468');
+insert into passenger values
+(3033,'Rohit Kumar','M','MH193');
+insert into passenger values
+(3034,'Rohan Mishra','M','QR8638');
+insert into passenger values
+(3035,'Shruti Seth','F','SG3301');
+insert into passenger values
+(3036,'Arushi Singh','F','SG3465');
+insert into passenger values
+(3037,'Shagun Pandey','M','UK812');
+insert into passenger values
+(3038,'Puneet Shah','M','SQ502');
+insert into passenger values
+(3039,'Gautam Singh','M','SG438');
+insert into passenger values
+(3040,'Pritam Kumar','M','SG767');
 
 insert into airport values
 ('Bengaluru','0','00:00:00');
