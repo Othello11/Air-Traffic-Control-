@@ -1,7 +1,7 @@
 
 <html>
 </head>
-<link rel="stylesheet" type="text/css" href="syle1.css">
+<link rel="stylesheet" type="text/css" href="style1.css">
 </head>
 <body>
 <h1>Pilot landing page</h1>
@@ -31,7 +31,8 @@ try{
     Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");   
     PreparedStatement pst = conn.prepareStatement("insert into flight values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
-    
+    PreparedStatement pst1 = conn.prepareStatement("select pilot_id from pilot where airlines=? and pilot_id not in(select pilot_id from flight where airlines=?)");
+	
     pst.setString(1,flight_id);
     pst.setString(2,aircraft_name);
     pst.setString(3,priority);
@@ -45,10 +46,21 @@ try{
     pst.setString(11,departure);
     pst.setString(12,arrival);
     pst.setString(13,pilot_id);
+    pst1.setString(1,airlines);
+    pst1.setString(2, airlines);
     
+    ResultSet rs= pst1.executeQuery();
     int count = pst.executeUpdate();
-     
+    
+    rs.next();
     out.println(count + " Row Inserted");
+    %>
+    <h3><% out.println("Availabe Pilots");%></h3>
+    <%
+    while(rs.next()){
+    %>	<p><%out.println(rs.getInt(1));%></p>
+    <%
+    }
     %>
     <nav>
     <!--Add font and logout link here -->
