@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+
+}
+body{
+	font-family:Montserrat;
+}
+
+nav{
+  background:#0b2133;
+}
+
+
+nav::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding:0 0 0 0;
+  margin : 0 0 0 0;
+}
+
+
+.nav2 {
+  float:left;
+  padding-bottom:20px;
+  text-align:center;
+}
+
+.nav2 ul {
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  text-align:center;
+  
+  display: flex; 
+  flex-direction:row;
+}
+
+.nav2 li {
+  
+  margin-left: 70px;
+  padding-top: 23px;
+  position: relative;
+}
+
+.nav2 a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.nav2 a:hover {
+  color: #fff;
+}
+
+.nav2 a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #fff;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+.nav2 a:hover::before {
+  width: 100%;
+}
+
+.nav3 {
+  float:left;
+  padding-bottom:20px;
+  text-align:center;
+}
+
+.nav3 ul {
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  text-align:center;
+  
+  display: flex; 
+  flex-direction:row;
+}
+
+
+.nav3 li {
+	margin-left: 70px;
+  padding-top: 23px;
+  position: relative;
+	style:none;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition:width 2s;
+}
+
+.nav3 li:hover {
+  color: #000;
+}
+
+.nav3 li::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #000;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+.nav3 li:hover::before {
+  width: 100%;
+}
+
+.flight-details {
+    font-family:Montserrat;
+    border-collapse: collapse;
+    width: 100%;
+    padding-top:10px;
+   	padding-bottom:5px;
+	text-align:center;
+}
+
+.flight-details td, .flight-details th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.flight-details tr:nth-child(even){background-color: #f2f2f2;}
+
+.flight-details tr:hover {background-color: #ddd;}
+
+.flight-details th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #28527a;
+    color: white;
+}
+
+.flight-cancel {
+	height:400px;
+	padding-top:200px; 
+	
+}
+.flight-cancel input{
+	padding:10px 10px 10px 10px; 	
+	margin:10px 10px 10px 10px;
+}
+.flight-cancel form{
+	text-align:center;
+	justify-content:center;
+}
+.flight-form {
+	margin-top:10px;
+	align-items:center;
+	
+}
+
+.flight-form input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+	
+.flight-form input[type=submit] {
+    width: 100%;
+    background-color: #3465a4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.flight-form input[type=submit]:hover {
+    background-color: #2e3436;
+}
+
+.flight-form input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.flight-form form {
+	margin: 0 auto;
+	width:400px;
+	padding: 1em;
+	border: 1px solid #ccc;
+	border-radius:1em;
+}
+.flight-form h2{
+	text-align:center;
+}
+.review {
+	width:100%;
+	text-align:center;
+}
+
+.review h4{
+	margin-left:0px;
+	padding-left:0;
+	font-weight:bold;
+	font-size:18px;
+}
+.review p{
+	margin-top:0;
+	margin-left:10px;
+	margin-bottom:40px;
+	
+	padding-left:10px;
+	text-align:center;
+	display:inline-block;
+}
+
+.weather details {
+	margin:50px 0 50px 40px;
+}
+
+.profile {
+	
+	margin-left:10px;
+	font-weight:bold:
+}
+
+.flight_id a:hover {
+  color: #000;
+}
+
+.flight_id a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #000;
+
+  position: relative;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+.flight_id a:hover::before {
+  width: 20%;
+}
