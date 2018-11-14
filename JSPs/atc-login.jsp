@@ -10,7 +10,7 @@
         String username = request.getParameter("username");   
         String password = request.getParameter("password");
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");    
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "goodjoke");    
         PreparedStatement pst = conn.prepareStatement("Select controller_id,password from atc where controller_id=? and password=?");
         pst.setString(1, username);
         pst.setString(2, password);

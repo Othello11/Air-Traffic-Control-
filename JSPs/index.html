@@ -1,45 +1,37 @@
 <!doctype html>
-<html>
-<head>
-<title>
-Flight Cancel
-</title>
-<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
-	<link rel="stylesheet" type="text/css" href="css/welcome-atc.css">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<html lang="en">
 
-	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <!--<link rel="stylesheet" href="css/demo.css">-->
+	<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+     <!--  <link rel="stylesheet" type="text/css" href="stylemain.css"> -->
+ 
 </head>
 <body>
- <div class="time">
- 
-</div>
-<nav>
-    <div class="container">
-    
-      <div class="nav2">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="welcome-atc.jsp">General</a></li>
-          <li><a href="atc-arrival.jsp">Arrival</a></li>
-          <li><a href="atc-departure.jsp">Departure</a></li>
-          <li><a href="atc-review.jsp">Review</a></li>
-          <li><a href="atc-weather.jsp">Weather</a></li>
-          <li><a href="airlines-request.html">Schedule New Flight</a></li>
-          <li><a href="flight-cancel.html">Cancel a Flight</a></li>
-          <li><a href="logout-atc.jsp">Logout</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-   	<div class="flight-form" style="height:400px;
-	padding-top:200px; ">
-		<form method="post" action="flight-cancel.jsp">
-		Flight ID : <input type="text"  name="flight_id"><br>
-		<input type="submit" value="Submit">
-		</form>
+	<div class="section">
+	<div class="text-content"><h1>Welcome to KIA,Bengaluru</h1>
+	<h2 >Continue as</h2>
+	<div class="nav">
+		<ul>
+			<div class="box1"><li><a href="passenger-login.html">Passenger</a></li></div>
+			<div class="box2"><li><a href="login.html">Pilot</a></li></div>
+			<div class="box3"><li><a href="atc-login.html">Controller</a></li></div>
+	</ul>
+	</div>
+	</div>
+	<div class="video-container">
+		<div class="color-overlay"></div>
+		<video autoplay loop muted>
+			<source src="http://localhost:8080/test1/videos/video.mp4" type="video/mp4">
+		</video>
+	</div>
 	</div>
 	<footer class="footer-distributed">
 
@@ -96,7 +88,6 @@ Flight Cancel
 			</div>
 
 		</footer>
-      
-</body>
 
-</html>
+
+</body>

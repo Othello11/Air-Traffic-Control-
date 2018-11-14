@@ -2,6 +2,13 @@
 <html>
 </head>
 <link rel="stylesheet" type="text/css" href="style1.css">
+<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 </head>
 <body>
 <h1>Pilot landing page</h1>
@@ -29,7 +36,7 @@ try{
     String pilot_id = request.getParameter("pilot_id");
     
     Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");   
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "goodjoke");
     PreparedStatement pst = conn.prepareStatement("insert into flight values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
     PreparedStatement pst1 = conn.prepareStatement("select pilot_id from pilot where airlines=? and pilot_id not in(select pilot_id from flight where airlines=?)");
 	
