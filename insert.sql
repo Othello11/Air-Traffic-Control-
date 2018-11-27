@@ -342,3 +342,24 @@ insert into weather values
 insert into weather values
 ('23:00:00','00:00:00',1001,'15°C',1,'0° north','3000m');
 
+
+
+DELIMITER //
+create procedure delete_flight (IN flightID varchar(10))
+BEGIN
+	delete from flight where flight_id = flightID ;
+END //
+DELIMITER ;
+
+
+
+
+DELIMITER //
+create trigger before_flight_insert
+	before insert on flight for each row
+begin
+	if  new.no_of_pass < 0 then
+		set new.no_of_pass = "0" ;
+	end if;
+end //
+DELIMITER ; 
