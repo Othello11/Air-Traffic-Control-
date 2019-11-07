@@ -1,40 +1,18 @@
+
 <html>
-<head>
+</head>
+<link rel="stylesheet" type="text/css" href="css/welcome-atc.css">
 <link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
-	<link rel="stylesheet" type="text/css" href="css/welcome-atc.css">
+	
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 </head>
-
 <body>
-<div class="time">
- 
-</div>
-<nav>
-    <div class="container">
-    
-      <div class="nav2">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="welcome-atc.jsp">General</a></li>
-          <li><a href="atc-arrival.jsp">Arrival</a></li>
-          <li><a href="atc-departure.jsp">Departure</a></li>
-          <li><a href="atc-review.jsp">Review</a></li>
-          <li><a href="atc-weather.jsp">Weather</a></li>
-          <li><a href="airlines-request.html">Schedule New Flight</a></li>
-          <li><a href="flight-cancel.html">Cancel a Flight</a></li>
-          <li><a href="logout-atc.jsp">Logout</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-    
-   
-  
+
+
 
 <%@ page import ="java.sql.*" %>
 <%@ page import =" java.sql.Connection" %>
@@ -53,50 +31,76 @@ try{
 	User user = (User)session.getAttribute("userLoggedIn");
 	if (user == null || !user.getLoggedIn()) {
 
-	   response.sendRedirect("atc-login.html");
+	   response.sendRedirect("passenger-login.html");
 	   return;
 	}
-    try{
-        Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "goodjoke");    
-        PreparedStatement pst = conn.prepareStatement("select * from weather");
-        ResultSet rs = pst.executeQuery();
-        %>
-     
-    <div class="weather">
-    	<%
-    		while(rs.next())
-    		{
-    			%><details>
-    				<summary style="font-weight:bold;">Weather Report :<%out.println(rs.getString(1) + " - " + rs.getString(2)); %></summary>
-    				<p>Tempearture : <% out.println(rs.getString(4)); %></p>
-    				<p>Wind Speed : <%out .println(rs.getInt(5)); %></p>
-    				<p>Wind Direction : <% out.println(rs.getString(6)); %></p>
-    				<p>Visibility : <% out.println(rs.getString(7)); %></p>
-    			</details>
-    			<%
-    		}
-    	%>
+
+try{
+    String username = request.getParameter("p_id");  
+   
+    Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
+    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "goodjoke");   
+    PreparedStatement pst = conn.prepareStatement("Select * from passenger where p_id=?");
+  	
+    pst.setString(1, username);
+   
+   
+    ResultSet rs = pst.executeQuery();
+   
+    rs.next();
+   
+    %>
+  	
+  	<nav>
+    <div class="container">
+    
+      <div class="nav2">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pass-profile.jsp">Profile</a></li>
+          <li><a href="passenger-logout.jsp?&p_id=<%=rs.getInt(1)%>">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <div class="flight-details" style="padding:50px 0 100px 0;">
+    	
+	<h3 align="center">Your details are...</h3>
+	<table align="center">
+		<tr>
+			<th>Passenger ID</th>
+			<td> <%out.print(rs.getInt(1));%></td>
+		</tr>
+		<tr>
+			<th>Name </th>
+			<td> <%out.print(rs.getString(2));%></td>
+		</tr>
+		<tr>
+			<th>Gender </th>
+			<td> <%out.print(rs.getString(3));%></td>
+		</tr>
+		<tr>
+			<th>Your Flight ID</th>
+			<td> <%out.print(rs.getString(4));%></td>
+		</tr>
+	</table>
+    
+    <p>How would you rate this airport? Care for a short review <br> <a href="passenger-review.jsp?&p_id=<%=rs.getInt(1)%>">Click Here!</a></p>
     
     </div>
-     	
-         
-        
-        
-  
-<%        
-   }
-   catch(Exception e){       
-       out.println("Something went wrong !! Please try again " + e);
-  
-   }  
-}
-catch(Exception e){       
-    out.println("Something went wrong !! Please try again " + e);
     
-} 
-   
+    <%
+}
+catch(Exception e){      
+   out.println("Something went wrong !! Please try again " + e);
+}  
+}
+catch(Exception e){      
+   out.println("Something went wrong !! Please try again " + e);
+}  
 %>
+
 <footer class="footer-distributed">
 
 			<div class="footer-left">
@@ -155,3 +159,5 @@ catch(Exception e){
       
 </body>
 </html>
+
+

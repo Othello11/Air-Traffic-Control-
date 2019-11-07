@@ -5,6 +5,7 @@
 <%@ page import ="java.sql.SQLException" %>
 <%@ page import ="java.sql.Statement" %>
 <%@ page import ="java.lang.*" %>
+<%@ page import ="test1.User" %>
 <%
     try{
         String username = request.getParameter("username");   
@@ -15,14 +16,13 @@
         pst.setString(1, username);
         pst.setString(2, password);
         ResultSet rs = pst.executeQuery();   
-        /*if(null!=request.getAttribute("errorMessage"))
-        {
-            out.println(request.getAttribute("errorMessage"));
-        }*/
-        if(rs.next()){           
-           //out.println("Valid login credentials")
-           RequestDispatcher rd = request.getRequestDispatcher("welcome-atc.jsp");
-           rd.forward(request, response);
+        if(rs.next()){
+        	int adminId = rs.getInt(1);
+        	User user = new User();
+        	user.setLoggedIn(true);
+        	user.setUserId(adminId);
+        	session.setAttribute("userLoggedIn", user);
+           	response.sendRedirect("welcome-atc.jsp");
         }
         else{
         	%>
@@ -33,7 +33,5 @@
    }
    catch(Exception e){       
        out.println("Something went wrong !! Please try again " + e);
-  
    }    
-   
 %>

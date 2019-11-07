@@ -5,6 +5,7 @@
 <%@ page import ="java.sql.SQLException" %>
 <%@ page import ="java.sql.Statement" %>
 <%@ page import ="java.lang.*" %>
+<%@ page import ="test1.User" %>
 <%
     try{
         String username = request.getParameter("username");   
@@ -21,12 +22,18 @@
         }*/
         if(rs.next()){           
            //out.println("Valid login credentials")
-           RequestDispatcher rd = request.getRequestDispatcher("welcome-passenger.jsp");
-           rd.forward(request, response);
+           	int adminId = rs.getInt(1);
+        	User user = new User();
+        	user.setLoggedIn(true);
+        	user.setUserId(adminId);
+        	session.setAttribute("userLoggedIn", user);
+        	 RequestDispatcher rd = request.getRequestDispatcher("welcome-passenger.jsp");
+             rd.include(request, response);
         }
         else{
         	%>
         	<h1>You have entered incorrect password</h1>
+        	
             <% RequestDispatcher rd = request.getRequestDispatcher("passenger-login.html");
             rd.include(request, response);
         }

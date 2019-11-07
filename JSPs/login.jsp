@@ -5,7 +5,9 @@
 <%@ page import ="java.sql.SQLException" %>
 <%@ page import ="java.sql.Statement" %>
 <%@ page import ="java.lang.*" %>
+<%@ page import ="test1.User" %>
 <%
+
     try{
         String username = request.getParameter("username");   
         String password = request.getParameter("password");
@@ -21,8 +23,14 @@
         }*/
         if(rs.next()){           
            //out.println("Valid login credentials")
-           RequestDispatcher rd = request.getRequestDispatcher("welcome-pilot.jsp");
-           rd.forward(request, response);
+           int adminId = rs.getInt(1);
+        	User user1 = new User();
+        	user1.setLoggedIn(true);
+        	user1.setUserId(adminId);
+        	session.setAttribute("userLoggedIn", user1);
+        	 RequestDispatcher rd = request.getRequestDispatcher("welcome-pilot.jsp");
+             rd.include(request, response);
+           
         }
         else{
         	%>
@@ -34,6 +42,6 @@
    catch(Exception e){       
        out.println("Something went wrong !! Please try again " + e);
   
-   }    
-   
+   }  
+
 %>

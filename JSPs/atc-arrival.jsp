@@ -42,7 +42,19 @@
 <%@ page import ="java.sql.SQLException" %>
 <%@ page import ="java.sql.Statement" %>
 <%@ page import ="java.lang.*" %>
+<%@ page import ="test1.User" %>
 <%
+try{
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("Pragma", "no-cache");
+	response.setHeader("Expires", "0");
+
+	User user = (User)session.getAttribute("userLoggedIn");
+	if (user == null || !user.getLoggedIn()) {
+
+	   response.sendRedirect("atc-login.html");
+	   return;
+	}
     try{
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "goodjoke");    
@@ -115,7 +127,12 @@
    catch(Exception e){       
        out.println("Something went wrong !! Please try again " + e);
   
-   }    
+   }  
+}
+catch(Exception e){       
+    out.println("Something went wrong !! Please try again " + e);
+    
+}  
    
 %>
 <footer class="footer-distributed">

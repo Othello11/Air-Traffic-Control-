@@ -1,11 +1,9 @@
 
 <html>
 </head>
-<link rel="stylesheet" type="text/css" href="style1.css">
-<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
-	
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">	
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
@@ -19,7 +17,19 @@
 <%@ page import ="java.sql.SQLException" %>
 <%@ page import ="java.sql.Statement" %>
 <%@ page import ="java.lang.*" %>
+<%@ page import ="test1.User" %>
 <%
+try{
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("Pragma", "no-cache");
+	response.setHeader("Expires", "0");
+
+	User user = (User)session.getAttribute("userLoggedIn");
+	if (user == null || !user.getLoggedIn()) {
+
+	   response.sendRedirect("atc-login.html");
+	   return;
+	}
 try{
     String flight_id = request.getParameter("flight_id");
     String aircraft_name = request.getParameter("aircraft_name");
@@ -34,12 +44,10 @@ try{
     String departure = request.getParameter("departure");
     String arrival = request.getParameter("arrival");
     String pilot_id = request.getParameter("pilot_id");
-    
     Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
     Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "goodjoke");
     PreparedStatement pst = conn.prepareStatement("insert into flight values (?,?,?,?,?,?,?,?,?,?,?,?,?)");
     PreparedStatement pst1 = conn.prepareStatement("select pilot_id from pilot where airlines=? and pilot_id not in(select pilot_id from flight where airlines=?)");
-	
     pst.setString(1,flight_id);
     pst.setString(2,aircraft_name);
     pst.setString(3,priority);
@@ -55,10 +63,8 @@ try{
     pst.setString(13,pilot_id);
     pst1.setString(1,airlines);
     pst1.setString(2, airlines);
-    
     ResultSet rs= pst1.executeQuery();
     int count = pst.executeUpdate();
-    
     rs.next();
     out.println(count + " Row Inserted");
     %>
@@ -86,9 +92,12 @@ try{
 catch(Exception e){      
    out.println("Something went wrong !! Please try again " + e);
 }   
+}
+catch(Exception e){       
+    out.println("Something went wrong !! Please try again " + e);
+    
+} 
 %>
-
-
 </body>
 </html>
 

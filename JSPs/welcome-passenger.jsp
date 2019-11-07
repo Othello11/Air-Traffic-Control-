@@ -11,19 +11,7 @@
 	<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 </head>
 <body>
-<nav>
-    <div class="container">
-    
-      <div class="nav2">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="pass-profile.jsp">Profile</a></li>
-          <li><a href="passenger-logout.jsp">Logout</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
+
 
 
 <%@ page import ="java.sql.*" %>
@@ -33,7 +21,19 @@
 <%@ page import ="java.sql.SQLException" %>
 <%@ page import ="java.sql.Statement" %>
 <%@ page import ="java.lang.*" %>
+<%@ page import ="test1.User" %>
 <%
+try{
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+	response.setHeader("Pragma", "no-cache");
+	response.setHeader("Expires", "0");
+
+	User user = (User)session.getAttribute("userLoggedIn");
+	if (user == null || !user.getLoggedIn()) {
+
+	   response.sendRedirect("passenger-login.html");
+	   return;
+	}
 try{
     String username = request.getParameter("username");  
     String password = request.getParameter("flight_id");
@@ -49,6 +49,19 @@ try{
     rs.next();
     rs1.next();
     %>
+  	
+  	<nav>
+    <div class="container">
+    
+      <div class="nav2">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pass-profile.jsp?&p_id=<%=rs.getInt(1)%>">Profile</a></li>
+          <li><a href="passenger-logout.jsp">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   
     <div class="flight-details" style="padding:50px 0 100px 0;">
     	
@@ -97,7 +110,11 @@ try{
 }
 catch(Exception e){      
    out.println("Something went wrong !! Please try again " + e);
-}   
+}
+}
+catch(Exception e){      
+   out.println("Something went wrong !! Please try again " + e);
+} 
 %>
 
 <footer class="footer-distributed">
