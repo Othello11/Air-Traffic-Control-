@@ -45,7 +45,7 @@
 <%
     try{
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");    
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "####");    
         PreparedStatement pst = conn.prepareStatement("Select * from flight where destination='Bengaluru' order by arrival");
         ResultSet rs = pst.executeQuery();
         %>
@@ -148,9 +148,9 @@
 
 				<p class="footer-links">
 					<a href="index.html">Home</a>
-					·
+					Â·
 					<a href="About.html">About Project</a>
-					·
+					Â·
 					<a href="Developers.html">Developers</a>
 				</p>
 
