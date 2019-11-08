@@ -46,7 +46,7 @@
 	try{
 		String flight_id = request.getParameter("flight_id");
 		Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-	    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");  
+	    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "####");  
 		PreparedStatement pst = conn.prepareStatement("update flight set status='Cancelled' where flight_id=?");
 		pst.setString(1,flight_id);
 		int count = pst.executeUpdate();
@@ -64,9 +64,9 @@ catch(Exception e){
 
 				<p class="footer-links">
 					<a href="index.html">Home</a>
-					·
+					Â·
 					<a href="About.html">About Project</a>
-					·
+					Â·
 					<a href="Developers.html">Developers</a>
 				</p>
 
