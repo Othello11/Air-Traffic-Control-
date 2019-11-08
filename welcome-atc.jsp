@@ -46,7 +46,7 @@ response.setIntHeader("Refresh", 3600); %>
     	String hour = String.valueOf(hours) + ":00:00";
     	
         Class.forName("com.mysql.jdbc.Driver");  // MySQL database connection
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "Admin@aryan1!");    
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectflight" , "root" , "#####");    
         PreparedStatement pst = conn.prepareStatement("Select * from flight order by departure");
         PreparedStatement pst1 = conn.prepareStatement("Select * from weather where st_time=?");
         pst1.setString(1, hour);
@@ -179,9 +179,9 @@ response.setIntHeader("Refresh", 3600); %>
 
 				<p class="footer-links">
 					<a href="index.html">Home</a>
-					·
+					Â·
 					<a href="About.html">About Project</a>
-					·
+					Â·
 					<a href="Developers.html">Developers</a>
 				</p>
 
